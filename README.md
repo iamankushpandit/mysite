@@ -43,8 +43,9 @@ visible in the Actions tab.
 ## Keeping it in step with the projects
 
 The **Featured in** section is a hand-copied summary of two generated pages:
-[Gume's press page](https://iamankushpandit.github.io/Gume/press.html), built
-from `site/press.json` in that repository, and
+Gume's press page (`site/press.html`, built from `site/press.json`; on branch
+`docs/press-page` and not yet published, so the portfolio does not link it
+until it is) and
 [esp_ai's featured tab](https://iamankushpandit.github.io/esp_ai/#featured),
 built from `docs/FEATURED.md` there. Those two are the sources of truth and
 carry the evidence (a dated screenshot of each article, its hash, an archive
