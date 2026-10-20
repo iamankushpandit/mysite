@@ -95,7 +95,8 @@ pre code { background: none; padding: 0; }
 @media (max-width: 640px) { .nav-links { display: none; } }
 
 /* ---- hero --------------------------------------------------------- */
-.hero { padding: 72px 16px 40px; }
+.hero { padding: 64px 16px 40px; }
+.hero-avatar { width: 112px; height: 112px; border-radius: 50%; border: 2px solid var(--line); box-shadow: var(--shadow); margin-bottom: 22px; }
 .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 650; color: var(--accent); margin-bottom: 14px; }
 .lede { font-size: 1.2rem; color: var(--fg-muted); max-width: 46em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 36px; }
@@ -121,6 +122,9 @@ pre code { background: none; padding: 0; }
   padding: 6px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 550;
 }
 .chip.is-active { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.group-title { font-size: 1.25rem; margin: 8px 0 16px; }
+.group-title .muted { font-size: .95rem; }
+.grid + .group-title { margin-top: 40px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
 .card {
   display: flex; flex-direction: column;

@@ -1,5 +1,5 @@
 /* Progressive enhancement only. The page is complete without this file:
-   it adds the colour-scheme toggle, the project filter, and live GitHub
+   it adds the colour-scheme toggle and live GitHub
    numbers that replace the static ones written into the HTML. */
 (function () {
   'use strict';
@@ -23,20 +23,8 @@
     });
   }
 
-  /* ---- project filter ------------------------------------------------ */
-  var chips = document.querySelectorAll('.chip[data-filter]');
-  var cards = document.querySelectorAll('.card[data-kind]');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var kind = chip.getAttribute('data-filter');
-      chips.forEach(function (c) { c.classList.toggle('is-active', c === chip); });
-      cards.forEach(function (card) {
-        card.classList.toggle('is-hidden', kind !== 'all' && card.getAttribute('data-kind') !== kind);
-      });
-    });
-  });
-
   /* ---- live numbers from GitHub -------------------------------------- */
+  var cards = document.querySelectorAll('.card[data-repo]');
   var OWNER = 'iamankushpandit';
   var repos = Array.prototype.map.call(cards, function (c) { return c.getAttribute('data-repo'); })
     .filter(Boolean);
