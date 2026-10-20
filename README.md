@@ -40,6 +40,20 @@ Serving straight from the branch (Source: *Deploy from a branch*, `main`, `/ (ro
 also works, since there is nothing to build; the workflow just makes deploys
 visible in the Actions tab.
 
+## Keeping it in step with the projects
+
+The **Featured in** section is a hand-copied summary of two generated pages:
+[Gume's press page](https://iamankushpandit.github.io/Gume/press.html), built
+from `site/press.json` in that repository, and
+[esp_ai's featured tab](https://iamankushpandit.github.io/esp_ai/#featured),
+built from `docs/FEATURED.md` there. Those two are the sources of truth and
+carry the evidence (a dated screenshot of each article, its hash, an archive
+copy). When either gains an entry, add a matching card here; independent
+coverage only, newest first.
+
+The **How this is built** paragraph in About restates the AI-disclosure wording
+from those projects' NOTICE.md files and should change when they do.
+
 ## Editing
 
 - Add a project: copy one `<article class="card">` in `index.html` and one

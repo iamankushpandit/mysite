@@ -192,6 +192,17 @@ pre.pipeline, pre.code {
 .thread-item h3 { font-size: 1.05rem; }
 .thread-item p { color: var(--fg-muted); font-size: .95rem; margin: 0; }
 
+/* ---- featured in ---------------------------------------------------- */
+.section-note { color: var(--fg-muted); margin: 0; max-width: 42em; font-size: .95rem; }
+.press { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.press-item { display: grid; gap: 4px; padding: 16px 18px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 12px; background: var(--bg-elev); }
+.press-meta { font-size: .78rem; color: var(--fg-muted); text-transform: uppercase; letter-spacing: .06em; }
+.press-project { color: var(--accent); font-weight: 700; }
+.press-item > a { font-weight: 650; line-height: 1.35; text-decoration: none; }
+.press-item > a:hover { text-decoration: underline; }
+.press-said { font-size: .9rem; color: var(--fg-muted); }
+.press-sources { margin: 22px 0 0; color: var(--fg-muted); font-size: .92rem; max-width: 60em; }
+
 /* ---- about -------------------------------------------------------- */
 .about { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; border-top: 1px solid var(--line); }
 .avatar { border-radius: 50%; border: 1px solid var(--line); }
