@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankush Pandit — Open Source</title>
+<meta name="description" content="Open-source projects by Ankush Pandit: a 40-game ESP32 learning console, a fully offline voice assistant on a microcontroller, a self-forming offline messaging network, a flags-and-maps library for embedded displays, and an Eclipse SWT bug investigation.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ankush Pandit — Open Source">
+<meta property="og:description" content="Hardware that works without the cloud: educational consoles, offline AI, mesh messaging and the libraries underneath them. All GPL, all on GitHub.">
+<meta property="og:image" content="https://raw.githubusercontent.com/iamankushpandit/Gume/main/site/assets/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@iamankushpandit">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#projects">Skip to projects</a>
+
+<header class="top">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="7" fill="currentColor"/><path d="M9 22 16 9l7 13M11.8 17.5h8.4" stroke="var(--bg)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span>Ankush Pandit</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#thread">The thread</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://github.com/iamankushpandit" rel="me">GitHub ↗</a></li>
+    </ul>
+    <button class="theme" id="theme-toggle" type="button" aria-label="Toggle colour scheme" title="Toggle colour scheme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/><path class="moon" d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============================================================ HERO -->
+<section class="hero wrap">
+  <p class="eyebrow">Open source · hardware and firmware</p>
+  <h1>Things that work when the cloud doesn't.</h1>
+  <p class="lede">
+    I build small devices that are complete on their own: a learning console with
+    forty games baked into flash, a voice assistant that thinks on a $20 chip, a
+    messaging network that forms itself when there is no signal. No accounts, no
+    telemetry, nothing phoning home. Everything here is GPL and on GitHub.
+  </p>
+  <div class="hero-actions">
+    <a class="btn primary" href="#projects">Browse the projects</a>
+    <a class="btn" href="https://github.com/iamankushpandit">github.com/iamankushpandit</a>
+  </div>
+  <dl class="stats" aria-label="At a glance">
+    <div><dt>Projects</dt><dd>5</dd></div>
+    <div><dt>GitHub stars</dt><dd data-stat="stars">150+</dd></div>
+    <div><dt>Forks</dt><dd data-stat="forks">17</dd></div>
+    <div><dt>Boards supported</dt><dd>12+</dd></div>
+    <div><dt>Telemetry</dt><dd>none</dd></div>
+  </dl>
+</section>
+
+<!-- ======================================================== PROJECTS -->
+<section id="projects" class="wrap section">
+  <div class="section-head">
+    <h2>Projects</h2>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button type="button" class="chip is-active" data-filter="all">All</button>
+      <button type="button" class="chip" data-filter="device">Devices</button>
+      <button type="button" class="chip" data-filter="library">Libraries</button>
+      <button type="button" class="chip" data-filter="investigation">Investigations</button>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <article class="card" data-kind="device" data-repo="Gume" style="--accent:#e25822">
+      <a class="card-media" href="#gume" aria-hidden="true" tabindex="-1">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/Gume/main/site/assets/six-tiles.jpg" alt="" loading="lazy">
+      </a>
+      <div class="card-body">
+        <p class="card-kind">Device · firmware</p>
+        <h3><a href="#gume">Braino! <span class="repo-name">(Gume)</span></a></h3>
+        <p>A 40-game educational console for young players on a $15 ESP32 touchscreen board. Two-player play over BLE, flashes from the browser, collects nothing.</p>
+        <ul class="tags"><li>C++17</li><li>ESP32</li><li>PlatformIO</li><li>BLE</li><li>GPL-3.0</li></ul>
+      </div>
+      <footer class="card-foot">
+        <span class="metric" data-metric="stars" title="GitHub stars">★ <b>84</b></span>
+        <span class="metric" data-metric="release" title="Latest release">v5.12.4</span>
+        <a class="more" href="https://github.com/iamankushpandit/Gume">Repo ↗</a>
+      </footer>
+    </article>
+
+    <article class="card" data-kind="device" data-repo="esp_ai" style="--accent:#d6336c">
+      <a class="card-media" href="#ivy" aria-hidden="true" tabindex="-1">
+        <img src="https://img.youtube.com/vi/lKE4J6aogrc/hqdefault.jpg" alt="" loading="lazy">
+      </a>
+      <div class="card-body">
+        <p class="card-kind">Device · offline AI</p>
+        <h3><a href="#ivy">Ivy AI <span class="repo-name">(esp_ai)</span></a></h3>
+        <p>A voice assistant that listens, thinks and speaks entirely on an ESP32-S3. Wake word, open-vocabulary speech-to-text, a 19.7M-parameter LLM and TTS, with no network at all.</p>
+        <ul class="tags"><li>C</li><li>ESP-IDF</li><li>ESP32-S3</li><li>SIMD</li><li>GGUF</li><li>GPL-3.0</li></ul>
+      </div>
+      <footer class="card-foot">
+        <span class="metric" data-metric="stars" title="GitHub stars">★ <b>67</b></span>
+        <span class="metric" data-metric="release" title="Status">active</span>
+        <a class="more" href="https://github.com/iamankushpandit/esp_ai">Repo ↗</a>
+      </footer>
+    </article>
+
+    <article class="card" data-kind="device" data-repo="LocalGrid" style="--accent:#2b8a3e">
+      <a class="card-media card-media--pad" href="#localgrid" aria-hidden="true" tabindex="-1">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/LocalGrid/main/assets/network-diagram.svg" alt="" loading="lazy">
+      </a>
+      <div class="card-body">
+        <p class="card-kind">Device · network</p>
+        <h3><a href="#localgrid">LocalGrid</a></h3>
+        <p>An offline, self-forming messaging network built from inexpensive ESP32 boards. Encrypted text, emergencies and push-to-talk across Wi-Fi and LoRa, with no server and no master.</p>
+        <ul class="tags"><li>C11</li><li>ESP-IDF</li><li>ESP-NOW</li><li>LoRa</li><li>Chaos tested</li><li>GPL-3.0</li></ul>
+      </div>
+      <footer class="card-foot">
+        <span class="metric" data-metric="stars" title="GitHub stars">★ <b>0</b></span>
+        <span class="metric" data-metric="release" title="Status">prototype</span>
+        <a class="more" href="https://github.com/iamankushpandit/LocalGrid">Repo ↗</a>
+      </footer>
+    </article>
+
+    <article class="card" data-kind="library" data-repo="map-n-flag" style="--accent:#1c7ed6">
+      <a class="card-media card-media--flags" href="#mapnflag" aria-hidden="true" tabindex="-1">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/IN.png" alt="" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/IN.png" alt="" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/BR.png" alt="" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/BR.png" alt="" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/JP.png" alt="" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/JP.png" alt="" loading="lazy">
+      </a>
+      <div class="card-body">
+        <p class="card-kind">Library · graphics data</p>
+        <h3><a href="#mapnflag">map-n-flag</a></h3>
+        <p>Flags and map silhouettes for 195 countries and 51 US states as plain C++ arrays. Zero RAM, no SD card, no LVGL required. The artwork inside Braino.</p>
+        <ul class="tags"><li>C++</li><li>ESP32</li><li>TFT_eSPI</li><li>LVGL optional</li></ul>
+      </div>
+      <footer class="card-foot">
+        <span class="metric" data-metric="stars" title="GitHub stars">★ <b>2</b></span>
+        <span class="metric" data-metric="release" title="Footprint">1.09 MiB</span>
+        <a class="more" href="https://github.com/iamankushpandit/map-n-flag">Repo ↗</a>
+      </footer>
+    </article>
+
+    <article class="card" data-kind="investigation" data-repo="eclipseDnDIssue" style="--accent:#7048e8">
+      <a class="card-media" href="#eclipse" aria-hidden="true" tabindex="-1">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/eclipseDnDIssue/master/EclipseDragAndDrop-4.13-Issue.gif" alt="" loading="lazy">
+      </a>
+      <div class="card-body">
+        <p class="card-kind">Investigation · bug report</p>
+        <h3><a href="#eclipse">Eclipse SWT drag-and-drop crash</a></h3>
+        <p>A reproducible case for a crash introduced in SWT 4.13 when dragging from a Java application into a C# one. Confirmed by the Eclipse Foundation and fixed in 4.18.</p>
+        <ul class="tags"><li>Java / SWT</li><li>C# / WPF</li><li>COM</li><li>Windows</li></ul>
+      </div>
+      <footer class="card-foot">
+        <span class="metric" title="Outcome">Bug 567422 · resolved</span>
+        <a class="more" href="https://github.com/iamankushpandit/eclipseDnDIssue">Repo ↗</a>
+      </footer>
+    </article>
+
+  </div>
+</section>
+
+<!-- ======================================================= DETAIL: GUME -->
+<section id="gume" class="detail wrap" style="--accent:#e25822">
+  <div class="detail-head">
+    <p class="eyebrow">Device · firmware · since Aug 2026</p>
+    <h2>Braino! <span class="muted">— a 40-game learning console on a Cheap Yellow Display</span></h2>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-media">
+      <img src="https://raw.githubusercontent.com/iamankushpandit/Gume/main/site/assets/lineup.jpg" alt="Six Braino consoles in printed cases of different colours and sizes, running Elements, Chess, Cursive, the home screen, Ludo and Sea Battle." loading="lazy">
+      <a class="video" href="https://www.youtube.com/watch?v=bESbkhq6tcc">
+        <img src="https://img.youtube.com/vi/bESbkhq6tcc/hqdefault.jpg" alt="Braino demo video on YouTube" loading="lazy">
+        <span>▶ Watch the demo</span>
+      </a>
+    </div>
+    <div class="detail-text">
+      <p>
+        Braino is firmware for the ESP32 touchscreen boards that sell for about fifteen
+        dollars. Flash it and the board becomes a handheld console with forty games for
+        young players: tracing letters and cursive, counting, telling the time, flags,
+        states, chess, Ludo, backgammon, Go, sea battle and more. Up to five player
+        profiles with their own scores and an administrator PIN that gates the settings.
+      </p>
+      <p>
+        Everything is baked into the 3 MB app partition. There is no SD card, no account
+        and no data collection. Wi-Fi is used for the clock and a daily
+        update-availability check that says nothing about the device. Bluetooth LE is
+        off by default; switched on, two consoles in the same room can play chess, Ludo,
+        backgammon or sea battle against each other over a non-connectable beacon, and
+        the device shows you the exact bytes it transmits.
+      </p>
+      <h3>What is in it</h3>
+      <ul class="facts">
+        <li><b>40 games</b> in 82% of a 3 MB flash partition, with no heap allocation anywhere in the firmware.</li>
+        <li><b>Flash from the browser</b> over Web Serial, including every past release, so there is always a way back from a bad build.</li>
+        <li><b>Five boards</b> from one source tree: two 2.8-inch CYD variants, a 3.2-inch, a 4-inch ST7796 and the ESP32-S3 Freenove FNK0104B, each described in one profile header.</li>
+        <li><b>Nine themes</b>, every pairing checked against WCAG contrast floors, with generated mock-ups of every screen in every theme.</li>
+        <li><b>Synthesised audio.</b> Every cue and the spoken boot phrase are generated from oscillator and formant scripts; there is not one audio file in the tree.</li>
+        <li><b>A serial console</b> that configures a bench of boards from one JSON file, behind the same PIN as the screens.</li>
+        <li><b>Printable enclosures</b> per board, and a 3D-printed case line-up pictured above.</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="https://iamankushpandit.github.io/Gume/">Project site &amp; browser flasher</a>
+        <a class="btn" href="https://github.com/iamankushpandit/Gume">Source</a>
+        <a class="btn" href="https://github.com/iamankushpandit/Gume/releases/latest">Latest release</a>
+        <a class="btn" href="https://hackaday.io/project/206948-braino-a-40-game-learning-console-on-a-cyd">Hackaday.io</a>
+        <a class="btn" href="https://www.reddit.com/r/gume_braino/">r/gume_braino</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== DETAIL: IVY -->
+<section id="ivy" class="detail wrap" style="--accent:#d6336c">
+  <div class="detail-head">
+    <p class="eyebrow">Device · offline AI · since Sep 2026</p>
+    <h2>Ivy AI <span class="muted">— a voice assistant that runs entirely on a $20 microcontroller</span></h2>
+  </div>
+  <div class="detail-grid detail-grid--flip">
+    <div class="detail-text">
+      <p>
+        Say "Hey Ivy", ask a question, and the board transcribes your speech, runs a
+        language model and answers out loud. No network, no server, no phone. It runs on
+        a Freenove FNK0104B: an ESP32-S3 with 8 MB of PSRAM, a 2.8-inch display, a
+        microphone and a speaker. Wi-Fi exists for one thing only, setting the clock.
+      </p>
+      <pre class="pipeline" aria-label="Pipeline">mic → LISTEN (energy VAD) → TRANSCRIBE (conformer CTC)
+    → THINK (19.7M-param LLM, 4-bit) → SPEAK (SVOX Pico) → speaker</pre>
+      <p>
+        The interesting problem is memory. The device has 8 MB of PSRAM and about 300 KB
+        of usable internal SRAM, while speech-to-text alone wants 5.4 MB and the LLM
+        6.5 MB. They coexist by never running at the same time: two arenas are reserved
+        at boot and each phase takes the whole thing, then gives it back. Speed comes
+        from 4-bit weights with int8 activations, a hand-written ESP32-S3 PIE SIMD
+        kernel, and a matrix-vector worker on the second core.
+      </p>
+      <h3>Measured on the board</h3>
+      <table class="numbers">
+        <tr><th>LLM, TinyTalk v8 (6.5 MB)</th><td>load 694 ms, 5.4–5.9 tok/s</td></tr>
+        <tr><th>LLM, any llama.cpp GGUF ≤ 5.8 MB</th><td>7.3 tok/s at 6.4M params, 30 tok/s at 260K</td></tr>
+        <tr><th>Speech to text</th><td>2.7–4.6 s for 1.4–2.9 s of audio</td></tr>
+        <tr><th>Whole spoken turn</th><td>roughly 14–17 s, listen to spoken answer</td></tr>
+        <tr><th>Accuracy, v8</th><td>99.2% on trained wording, 63.3% on rephrasings, 0% facts wrong</td></tr>
+      </table>
+      <ul class="facts">
+        <li><b>Drop any GGUF file</b> on the SD card and it appears on the model page; the docs give the fit rules and the vocabulary-shrinking tools.</li>
+        <li><b>Plain C answers</b> time, date, timers and identity without the model, and the UI marks which path answered.</li>
+        <li><b>Nothing ever flashes.</b> The screen is a dirty-row text renderer with no framebuffer, and a host harness measures what percentage of the panel each update repainted.</li>
+        <li><b>Host-first.</b> The UI, the arenas and both LLM engines build and run on a PC, so most work needs no hardware.</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="https://iamankushpandit.github.io/esp_ai/">Project site</a>
+        <a class="btn" href="https://github.com/iamankushpandit/esp_ai">Source</a>
+        <a class="btn" href="https://www.youtube.com/shorts/lKE4J6aogrc">Watch it answer</a>
+        <a class="btn" href="https://iamankushpandit.github.io/esp_ai/#press">In the press</a>
+      </div>
+    </div>
+    <div class="detail-media">
+      <img src="https://raw.githubusercontent.com/iamankushpandit/esp_ai/main/docs/ui_preview.png" alt="Ivy AI's pink, white and black command-line style interface, rendered by the real UI code on a host." loading="lazy">
+      <img src="https://raw.githubusercontent.com/iamankushpandit/esp_ai/main/docs/assets/demo-8m.gif" alt="Animated demo of Ivy AI answering a question on the device." loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== DETAIL: LOCALGRID -->
+<section id="localgrid" class="detail wrap" style="--accent:#2b8a3e">
+  <div class="detail-head">
+    <p class="eyebrow">Device · network · prototype · since Sep 2026</p>
+    <h2>LocalGrid <span class="muted">— an offline messaging network that forms and heals itself</span></h2>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-media">
+      <img class="diagram" src="https://raw.githubusercontent.com/iamankushpandit/LocalGrid/main/assets/network-diagram.svg" alt="Network diagram: access points pass messages between each other in hops with handhelds attached, a LoRa backbone runs beneath the Wi-Fi mesh, GPS gives the main access point its time, and a laptop watches over Bluetooth without joining." loading="lazy">
+    </div>
+    <div class="detail-text">
+      <p>
+        Put a few powered access points around an area with no signal, hand everyone a
+        touchscreen handheld, and people can message each other. Nobody configures
+        anything after the first setup. It is designed for the moment the infrastructure
+        everyone relies on is not there.
+      </p>
+      <p>
+        Three radios, each with a job. <b>Wi-Fi</b> (ESP-NOW) carries normal traffic
+        between access points and each handheld's link. <b>LoRa</b> is a second, much
+        longer link between access points for when Wi-Fi cannot reach. <b>Bluetooth</b>
+        lets a laptop watch the network's health without joining it. Emergency alerts go
+        out over Wi-Fi and LoRa at the same time.
+      </p>
+      <h3>What it does</h3>
+      <ul class="facts">
+        <li><b>End-to-end encrypted 1:1 messages</b> with X25519, HKDF-SHA256 and ChaCha20-Poly1305. Access points carry them without being able to read them.</li>
+        <li><b>Groups, broadcasts, emergencies</b> that break through every screen including the lock screen, and <b>push-to-talk</b> with 100 ms frames sealed like text.</li>
+        <li><b>No master, no server.</b> Every access point holds a full replica of settings, groups, presence, grid time and health. Split the network in half and rejoin it and it reconciles on its own.</li>
+        <li><b>Bounded by design.</b> Fixed-size tables, no heap allocation per message, and a defined, logged result when anything fills up.</li>
+        <li><b>Six handheld boards</b> plus an ESP32-C6 alert unit, GPS for time and position, and an admin page served from every access point.</li>
+      </ul>
+      <h3>Tested by breaking it</h3>
+      <p>
+        A chaos framework randomly kills access points and handhelds, cuts their power and
+        switches their radios off, for hours, unattended, while the handhelds keep
+        messaging. In the 10-hour run of 18 September 2026: 55 faults injected, 55
+        recovered, none needing a human, with the backbone re-forming in a median of
+        3.7 seconds. It found three bugs that code review and unit tests never could,
+        including the self-healing promise not being true when every access point went
+        down at once.
+      </p>
+      <div class="links">
+        <a class="btn primary" href="https://iamankushpandit.github.io/LocalGrid/">Project site</a>
+        <a class="btn" href="https://github.com/iamankushpandit/LocalGrid">Source</a>
+        <a class="btn" href="https://iamankushpandit.github.io/LocalGrid/admin/">Try the admin page</a>
+        <a class="btn" href="https://github.com/iamankushpandit/LocalGrid/blob/main/docs/chaos-engineering.md">How it was chaos tested</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================= DETAIL: MAP-N-FLAG -->
+<section id="mapnflag" class="detail wrap" style="--accent:#1c7ed6">
+  <div class="detail-head">
+    <p class="eyebrow">Library · graphics data · since Aug 2026</p>
+    <h2>map-n-flag <span class="muted">— 195 flags and maps for the ESP32, as plain C++ arrays</span></h2>
+  </div>
+  <div class="detail-grid detail-grid--flip">
+    <div class="detail-text">
+      <p>
+        Country flags and map silhouettes for 195 countries plus 51 US states and DC,
+        baked into flash as <code>const</code> data. No runtime SVG parsing, no SD card,
+        no external asset loading. It was built for a 320×240 Cheap Yellow Display with
+        4 MB of flash and no PSRAM, but nothing in it is board-specific. It is the
+        artwork behind Braino's flag, map and state games.
+      </p>
+      <pre class="code"><code>#include "map_n_flag.h"
+const mnf_img_t *flag = mnf_flag("FR");   // 80x60 indexed image
+const mnf_img_t *map  = mnf_map("FR");    // silhouette, same ISO code
+const char      *name = mnf_name("FR");   // "France"</code></pre>
+      <ul class="facts">
+        <li><b>Zero RAM.</b> <code>.bss</code> and <code>.data</code> are both 0 bytes, verified with the toolchain's size tool.</li>
+        <li><b>1.09 MiB</b> of flash for all 195 flags and 191 outlines; 280 KiB more for the US states, opt-in.</li>
+        <li><b>One header, thirteen functions, two structs.</b> Lookup is a binary search over a sorted table, safe to call before any display is set up.</li>
+        <li><b>No LVGL required.</b> Draw rows straight into TFT_eSPI or LovyanGFX as RGB565; LVGL v8 and v9 support is an optional header.</li>
+        <li><b>Flags and outlines share the ISO key</b>, so a "which flag matches this outline?" game is two calls with one string.</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="https://github.com/iamankushpandit/map-n-flag">Source &amp; README</a>
+        <a class="btn" href="https://github.com/iamankushpandit/map-n-flag/tree/main/examples">Examples</a>
+        <a class="btn" href="https://github.com/iamankushpandit/map-n-flag/tree/main/docs/previews">Preview every image</a>
+      </div>
+    </div>
+    <div class="detail-media">
+      <div class="flag-wall" aria-label="Sample flags and outlines from the library">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/FR.png" alt="France flag" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/FR.png" alt="France outline" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/IN.png" alt="India flag" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/IN.png" alt="India outline" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/US.png" alt="United States flag" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/US.png" alt="United States outline" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/KE.png" alt="Kenya flag" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/KE.png" alt="Kenya outline" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/flags/AU.png" alt="Australia flag" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/maps/AU.png" alt="Australia outline" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/state_flags/CA.png" alt="California flag" loading="lazy">
+        <img src="https://raw.githubusercontent.com/iamankushpandit/map-n-flag/main/docs/previews/state_maps/CA.png" alt="California outline" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== DETAIL: ECLIPSE -->
+<section id="eclipse" class="detail wrap" style="--accent:#7048e8">
+  <div class="detail-head">
+    <p class="eyebrow">Investigation · 2020</p>
+    <h2>Eclipse SWT drag-and-drop crash <span class="muted">— found, reproduced, confirmed, fixed upstream</span></h2>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-media">
+      <img src="https://raw.githubusercontent.com/iamankushpandit/eclipseDnDIssue/master/EclipseDragAndDrop-4.13-Issue.gif" alt="Screen recording: dragging a string from an SWT window into a C# text field crashes the SWT application." loading="lazy">
+    </div>
+    <div class="detail-text">
+      <p>
+        While upgrading a product from Eclipse 4.7 to 4.16, dragging a string from an
+        SWT application into a WPF application began crashing the Java side,
+        intermittently but often. This repository is the minimal reproduction: an SWT
+        window with a drag source, a C# window with a drop target, and the same code
+        built against SWT 4.12 and 4.13 so the regression is isolated to one library
+        version.
+      </p>
+      <p>
+        The cause was a change to <code>DragSource</code> in SWT 4.13 that aggressively
+        released every COM object once the drop completed. A drop target that keeps a
+        reference for later use then touches freed memory. The Eclipse Foundation
+        confirmed the analysis on
+        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=567422">Bug 567422</a>,
+        changed SWT to trust the target to release what it still holds, and shipped the
+        fix in Eclipse 4.18.
+      </p>
+      <ul class="facts">
+        <li><b>Side-by-side projects</b> for SWT 4.12, 4.13 and 4.16, plus the compiled C# target, so anyone can reproduce it in minutes.</li>
+        <li><b>A video and a thread dump</b> of the crash, and the exact SWT source jars compared.</li>
+        <li><b>Outcome:</b> an upstream fix in the Eclipse platform, credited by the SWT maintainers.</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="https://github.com/iamankushpandit/eclipseDnDIssue">Source &amp; write-up</a>
+        <a class="btn" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=567422">Eclipse Bug 567422</a>
+        <a class="btn" href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/commit/?id=774e87313a722b36d2411c587111e00014f54074">The upstream fix</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== THREAD -->
+<section id="thread" class="wrap section">
+  <h2>The thread that runs through them</h2>
+  <div class="thread">
+    <div class="thread-item">
+      <h3>Cheap hardware, finished software</h3>
+      <p>Four of the five run on ESP32 boards that cost between ten and twenty dollars. The constraint is the point: 4 MB of flash and no PSRAM is enough for forty games if nothing is wasted, and a $20 board is enough for a language model if the memory is planned rather than hoped for.</p>
+    </div>
+    <div class="thread-item">
+      <h3>Complete without a connection</h3>
+      <p>None of these devices needs the Internet to do its job. Braino collects nothing and says so on the device. Ivy's radio is off except to set the clock. LocalGrid exists precisely for when the network is gone.</p>
+    </div>
+    <div class="thread-item">
+      <h3>Measured, then claimed</h3>
+      <p>Tokens per second, flash bytes, frame times, recovery seconds: each README states a number and where it came from. LocalGrid's self-healing claim was tested by injecting fifty-five faults over ten hours, and the write-up includes what the test still cannot find.</p>
+    </div>
+    <div class="thread-item">
+      <h3>They feed each other</h3>
+      <p>map-n-flag is the artwork inside Braino. LocalGrid and Braino share five display boards, so a profile written for one ports to the other. Ivy and Braino both run on the Freenove FNK0104B. The Eclipse investigation is the oldest and the odd one out, but it set the pattern: reproduce it, measure it, write it down, send it upstream.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== ABOUT -->
+<section id="about" class="wrap section about">
+  <img class="avatar" src="https://avatars.githubusercontent.com/u/16137085?v=4" alt="" width="96" height="96" loading="lazy">
+  <div>
+    <h2>About</h2>
+    <p>
+      I'm Ankush Pandit. I write firmware and the tools around it, mostly for small
+      touchscreen boards, and I publish the whole thing: source, enclosures, test
+      harnesses, the design decisions and the measurements behind them. Every project
+      here is GPL-3.0-or-later and takes issues and pull requests on GitHub.
+    </p>
+    <ul class="contact">
+      <li><a href="https://github.com/iamankushpandit" rel="me">GitHub</a></li>
+      <li><a href="https://x.com/iamankushpandit" rel="me">X / Twitter</a></li>
+      <li><a href="https://hackaday.io/project/206948-braino-a-40-game-learning-console-on-a-cyd">Hackaday.io</a></li>
+      <li><a href="https://www.reddit.com/r/gume_braino/">Reddit</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 Ankush Pandit. Each project is licensed under its own terms in its repository; the four firmware projects are GPL-3.0-or-later.</p>
+    <p class="small">Project images are served from their own repositories, so this page shows what is currently on <code>main</code>. Stars and release numbers refresh from the GitHub API when it answers, and fall back to the values written here when it doesn't.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
