@@ -48,7 +48,7 @@
   <p class="lede">
     I make things on inexpensive hardware and release the whole of them: a 40-game
     learning console for young players, a voice assistant running a language model
-    on a microcontroller, a messaging network that forms itself, a flags-and-maps
+    on a microcontroller, a chaos-engineered messaging network that forms and heals itself, a flags-and-maps
     library for embedded displays, and a reproduction that got a crash fixed in
     Eclipse. Source, enclosures, test harnesses and the numbers behind every claim,
     all on GitHub under the GPL.
@@ -116,8 +116,8 @@
       <div class="card-body">
         <p class="card-kind">Device · network</p>
         <h3><a href="#localgrid">LocalGrid</a></h3>
-        <p>An offline, self-forming messaging network built from inexpensive ESP32 boards. Encrypted text, emergencies and push-to-talk across Wi-Fi and LoRa, with no server and no master.</p>
-        <ul class="tags"><li>C11</li><li>ESP-IDF</li><li>ESP-NOW</li><li>LoRa</li><li>Chaos tested</li><li>GPL-3.0</li></ul>
+        <p>An offline, self-forming messaging network built from inexpensive ESP32 boards. Encrypted text, emergencies and push-to-talk across Wi-Fi and LoRa, with no server and no master. Its self-healing claim is proven by chaos engineering: 55 faults injected over ten hours, 55 recovered.</p>
+        <ul class="tags"><li>C11</li><li>ESP-IDF</li><li>ESP-NOW</li><li>LoRa</li><li>Chaos engineering</li><li>GPL-3.0</li></ul>
       </div>
       <footer class="card-foot">
         <span class="metric" data-metric="stars" title="GitHub stars">★ <b>0</b></span>
@@ -310,9 +310,9 @@
         <li><b>Bounded by design.</b> Fixed-size tables, no heap allocation per message, and a defined, logged result when anything fills up.</li>
         <li><b>Six handheld boards</b> plus an ESP32-C6 alert unit, GPS for time and position, and an admin page served from every access point.</li>
       </ul>
-      <h3>Tested by breaking it</h3>
+      <h3>Chaos engineering: tested by breaking it</h3>
       <p>
-        A chaos framework randomly kills access points and handhelds, cuts their power and
+        A chaos-engineering framework randomly kills access points and handhelds, cuts their power and
         switches their radios off, for hours, unattended, while the handhelds keep
         messaging. In the 10-hour run of 18 September 2026: 55 faults injected, 55
         recovered, none needing a human, with the backbone re-forming in a median of
@@ -324,7 +324,7 @@
         <a class="btn primary" href="https://iamankushpandit.github.io/LocalGrid/">Project site</a>
         <a class="btn" href="https://github.com/iamankushpandit/LocalGrid">Source</a>
         <a class="btn" href="https://iamankushpandit.github.io/LocalGrid/admin/">Try the admin page</a>
-        <a class="btn" href="https://github.com/iamankushpandit/LocalGrid/blob/main/docs/chaos-engineering.md">How it was chaos tested</a>
+        <a class="btn" href="https://github.com/iamankushpandit/LocalGrid/blob/main/docs/chaos-engineering.md">The chaos engineering write-up</a>
       </div>
     </div>
   </div>
@@ -437,7 +437,7 @@ const char      *name = mnf_name("FR");   // "France"</code></pre>
     </div>
     <div class="thread-item">
       <h3>Measured, then claimed</h3>
-      <p>Tokens per second, flash bytes, frame times, recovery seconds: each README states a number and where it came from. LocalGrid's self-healing claim was tested by injecting fifty-five faults over ten hours, and the write-up includes what the test still cannot find.</p>
+      <p>Tokens per second, flash bytes, frame times, recovery seconds: each README states a number and where it came from. LocalGrid's self-healing claim went through chaos engineering, fifty-five faults injected over ten hours while the handhelds kept messaging, and the write-up includes what the test still cannot find.</p>
     </div>
     <div class="thread-item">
       <h3>They feed each other</h3>
@@ -450,55 +450,65 @@ const char      *name = mnf_name("FR");   // "France"</code></pre>
 <section id="featured" class="wrap section">
   <div class="section-head">
     <h2>Featured in</h2>
-    <p class="section-note">Independent coverage only. Each project keeps the full list, with a dated screenshot of every page and an archive copy where one could be made.</p>
+    <p class="section-note">Independent coverage only.</p>
   </div>
   <ul class="press">
     <li class="press-item" style="--accent:#e25822">
+      <a class="press-shot" href="https://hackaday.com/2026/10/16/braino-takes-the-cheap-yellow-display-to-school/" aria-hidden="true" tabindex="-1"><img src="assets/featured/hackaday.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Braino!</span> · Hackaday · 16 Oct 2026</span>
       <a href="https://hackaday.com/2026/10/16/braino-takes-the-cheap-yellow-display-to-school/">Braino! Takes The Cheap Yellow Display To School</a>
       <span class="press-said">Tom Nardi: a common Cheap Yellow Display turned into a legitimate educational tool, GPLv3, with no ads, accounts or cloud.</span>
     </li>
     <li class="press-item" style="--accent:#e25822">
+      <a class="press-shot" href="https://github.com/s0lness/awesome-esp32" aria-hidden="true" tabindex="-1"><img src="assets/featured/awesome.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Braino!</span> · awesome-esp32 · 16 Oct 2026</span>
       <a href="https://github.com/s0lness/awesome-esp32">Listed under Applications in awesome-esp32</a>
       <span class="press-said">A curated list whose rules require proof the project ran on the named hardware.</span>
     </li>
     <li class="press-item" style="--accent:#d6336c">
+      <a class="press-shot" href="https://www.opensourceforu.com/2026/10/open-source-voice-ai-runs-entirely-on-esp32-s3/" aria-hidden="true" tabindex="-1"><img src="assets/featured/osfy.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Ivy AI</span> · Open Source For You · 12 Oct 2026</span>
       <a href="https://www.opensourceforu.com/2026/10/open-source-voice-ai-runs-entirely-on-esp32-s3/">Open-Source Voice AI Runs Entirely On ESP32-S3</a>
       <span class="press-said">A walk through the whole pipeline and the licensing caveats; the piece most readers arrived from.</span>
     </li>
     <li class="press-item" style="--accent:#d6336c">
+      <a class="press-shot" href="https://blog.adafruit.com/2026/10/12/open-source-voice-ai-runs-entirely-on-esp32-s3/" aria-hidden="true" tabindex="-1"><img src="assets/featured/adafruit.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Ivy AI</span> · Adafruit blog · 12 Oct 2026</span>
       <a href="https://blog.adafruit.com/2026/10/12/open-source-voice-ai-runs-entirely-on-esp32-s3/">Open-Source Voice AI runs entirely on ESP32-S3</a>
       <span class="press-said">The pipeline, the board and the measured speed figures, restated for Adafruit's readers.</span>
     </li>
     <li class="press-item" style="--accent:#d6336c">
+      <a class="press-shot" href="https://www.electronicsforu.com/news/this-esp32-board-runs-an-offline-ai-tutor-for-kids" aria-hidden="true" tabindex="-1"><img src="assets/featured/efy.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Ivy AI</span> · Electronics For You · 12 Oct 2026</span>
       <a href="https://www.electronicsforu.com/news/this-esp32-board-runs-an-offline-ai-tutor-for-kids">This ESP32 Board Runs An Offline AI Tutor For Kids</a>
       <span class="press-said">Framed as a tutor for young learners and, fairly, led with the limits: a 14 to 17 second turn, English only.</span>
     </li>
     <li class="press-item" style="--accent:#d6336c">
+      <a class="press-shot" href="https://noticias.mechatronicstore.cl/electronica/ivy-ai-un-tutor-de-voz-sin-internet-que-corre-en-un-esp32-s3" aria-hidden="true" tabindex="-1"><img src="assets/featured/mecha.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Ivy AI</span> · MechaNoticias, Chile · 12 Oct 2026</span>
       <a href="https://noticias.mechatronicstore.cl/electronica/ivy-ai-un-tutor-de-voz-sin-internet-que-corre-en-un-esp32-s3">Ivy AI, un tutor de voz sin internet que corre en un ESP32-S3</a>
       <span class="press-said">The Electronics For You piece in Spanish.</span>
     </li>
     <li class="press-item" style="--accent:#e25822">
+      <a class="press-shot" href="https://fabscene.com/new/make/braino-esp32-cyd-40-game-educational-console-gpl/" aria-hidden="true" tabindex="-1"><img src="assets/featured/fabscene.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Braino!</span> · FabScene, Japan · 15 Sep 2026</span>
       <a href="https://fabscene.com/new/make/braino-esp32-cyd-40-game-educational-console-gpl/">2300円のボードが子ども用ゲーム機に、Makerが40本を公開</a>
       <span class="press-said">A 2,300-yen board becomes a children's game console: 40 games in flash, Web Serial flashing, Bluetooth off by default.</span>
     </li>
     <li class="press-item" style="--accent:#e25822">
+      <a class="press-shot" href="https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PROJECTS.md" aria-hidden="true" tabindex="-1"><img src="assets/featured/cydhub.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Braino!</span> · CYD community hub · 13 Sep 2026</span>
       <a href="https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PROJECTS.md">Listed in the Cheap Yellow Display project directory</a>
       <span class="press-said">Brian Lough's community repository for the board lists Braino among the projects that run on it.</span>
     </li>
     <li class="press-item" style="--accent:#e25822">
+      <a class="press-shot" href="https://www.geeky-gadgets.com/cyd-esp32-module-features/" aria-hidden="true" tabindex="-1"><img src="assets/featured/geekygadgets.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Braino!</span> · Geeky Gadgets · 9 Sep 2026</span>
       <a href="https://www.geeky-gadgets.com/cyd-esp32-module-features/">$9 CYD ESP32 Module Includes a 2.88-Inch LCD Screen</a>
       <span class="press-said">Written from Hacktuber's video, when the count was 31 games.</span>
     </li>
     <li class="press-item" style="--accent:#e25822">
+      <a class="press-shot" href="https://www.youtube.com/watch?v=xvjQwQaIYu8" aria-hidden="true" tabindex="-1"><img src="assets/featured/hacktuber.jpg" alt="" width="640" height="400" loading="lazy"></a>
       <span class="press-meta"><span class="press-project">Braino!</span> · Hacktuber, YouTube · 28 Aug 2026</span>
       <a href="https://www.youtube.com/watch?v=xvjQwQaIYu8">With This $9 CYD ESP32 Module You Can Do Anything...</a>
       <span class="press-said">The first time somebody outside the project put Braino on real hardware on camera, to 1.49M subscribers.</span>
@@ -510,7 +520,7 @@ const char      *name = mnf_name("FR");   // "France"</code></pre>
     </li>
   </ul>
   <p class="press-sources">
-    Full lists with screenshots, capture dates and archive copies:
+    Each picture is the top of the page as it was on 20 October 2026. Full lists with capture dates, hashes and archive copies:
     <a href="https://iamankushpandit.github.io/Gume/press.html">Braino press page</a> ·
     <a href="https://iamankushpandit.github.io/esp_ai/#featured">Ivy AI featured page</a>.
     None of these outlets had a board in hand; every piece was written from the READMEs and build logs, and both pages say so.
